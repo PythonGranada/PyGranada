@@ -11,6 +11,7 @@ it for a coming-soon website.
 """
 
 import cgi
+import os
 import time
 
 EMAILS_FILE = 'emails.txt'
@@ -30,6 +31,10 @@ def store_address():
             return False
         with open(EMAILS_FILE, 'at') as fd:
             fd.write("{0} | {1}\n".format(time.ctime(), address))
+
+        # Make sure nobody can read the file
+        os.chmod(EMAILS_FILE, 0600)
+
         return True
 
 def redirect(url):
