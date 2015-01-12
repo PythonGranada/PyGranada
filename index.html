@@ -38,9 +38,9 @@
 
 					 <h3>Si te interesa, <b>déjanos tu correo electrónico</b> y te avisaremos cuando seamos suficientes y estemos listos para dar nuestros primeros pasos.</h3><br>
 
-					<form class="form-inline" role="form">
+					<form class="form-inline" role="form" action="store.py" method="post">
 					  <div class="form-group">
-					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu correo electrónico">
+					    <input type="email" class="form-control" name="email-address" id="email-address" placeholder="Tu correo electrónico">
 					  </div>
 					  <button type="submit" class="btn btn-warning btn-lg">¡Me interesa!</button>
 					</form>
@@ -87,12 +87,14 @@
 	<div class="container">
 		<div class="row centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tu correo electrónico">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">¡Me interesa!</button>
-				</form>
+
+			  <form class="form-inline" role="form" action="store.py" method="post">
+			    <div class="form-group">
+			      <input type="email" class="form-control" name="email-address" id="email-address" placeholder="Tu correo electrónico">
+			    </div>
+			    <button type="submit" class="btn btn-warning btn-lg">¡Me interesa!</button>
+			  </form>
+
 			</div>
 			<div class="col-lg-3"></div>
 		</div><!-- /row -->
