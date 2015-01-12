@@ -30,7 +30,8 @@ def store_address():
         if not address:
             return False
         with open(EMAILS_FILE, 'at') as fd:
-            fd.write("{0} | {1}\n".format(time.ctime(), address))
+            utctime = time.asctime(time.gmtime()) + ' UTC'
+            fd.write("{0} | {1}\n".format(utctime, address))
 
         # Make sure nobody can read the file
         os.chmod(EMAILS_FILE, 0600)
